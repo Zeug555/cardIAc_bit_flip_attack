@@ -1,0 +1,126 @@
+save path : ./save/cnn_quan/nominal_0.001
+{'data_path': './dataset', 'arch': 'cnn_quan', 'dataset': 'mit-bih', 'epochs': 20, 'start_epoch': 0, 'attack_sample_size': 128, 'test_batch_size': 128, 'optimizer': 'Adam', 'schedule': [25, 40], 'gammas': [0.1, 0.1], 'workers': 4, 'ngpu': 0, 'gpu_id': 0, 'print_freq': 100, 'decay': 0.0003, 'momentum': 0.9, 'limit_layer': -1, 'randbet_coeff': 10, 'k_top': 20, 'randbet': False, 'clipping_coeff': 0.0, 'learning_rate': 0.001, 'manualSeed': 8840, 'save_path': './save/cnn_quan/nominal_0.001', 'enable_bfa': False, 'resume': '', 'quan_bitwidth': None, 'reset_weight': False, 'evaluate': False, 'n_iter': 30, 'model_only': False, 'random_bfa': False, 'use_cuda': False}
+Random Seed: 8840
+python version : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+torch  version : 2.5.1+cpu
+cudnn  version : None
+=> creating model 'cnn_quan'
+=> network :
+ cnn_bones(
+  (conv1): quan_Conv1d(1, 4, kernel_size=(21,), stride=(1,))
+  (pool1): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (conv2): quan_Conv1d(4, 4, kernel_size=(21,), stride=(1,))
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): quan_Linear(in_features=44, out_features=32, bias=True)
+  (fc2): quan_Linear(in_features=32, out_features=5, bias=True)
+)
+=> do not use any checkpoint for cnn_quan model
+
+==>>[2024-11-25 18:53:52] [Epoch=000/020] [Need: 00:00:00] [LR=0.0010] [Best : Accuracy=0.00, Error=100.00]
+  Epoch: [000][000/070]   Time 0.022 (0.022)   Data 0.001 (0.001)   Loss 1.6068 (1.6068)   Prec@1 22.000 (22.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:52]
+  **Train** Prec@1 34.400 Prec@5 100.000 Error@1 65.600
+  **Test** Prec@1 55.680 Prec@5 100.000 Error@1 44.320
+
+==>>[2024-11-25 18:53:53] [Epoch=001/020] [Need: 00:00:08] [LR=0.0010] [Best : Accuracy=55.68, Error=44.32]
+  Epoch: [001][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 1.2081 (1.2081)   Prec@1 54.000 (54.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:53]
+  **Train** Prec@1 72.800 Prec@5 100.000 Error@1 27.200
+  **Test** Prec@1 77.920 Prec@5 100.000 Error@1 22.080
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:53:53] [Epoch=002/020] [Need: 00:00:09] [LR=0.0010] [Best : Accuracy=77.92, Error=22.08]
+  Epoch: [002][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.7500 (0.7500)   Prec@1 76.000 (76.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:53]
+  **Train** Prec@1 79.629 Prec@5 100.000 Error@1 20.371
+  **Test** Prec@1 80.740 Prec@5 100.000 Error@1 19.260
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:53:54] [Epoch=003/020] [Need: 00:00:09] [LR=0.0010] [Best : Accuracy=80.74, Error=19.26]
+  Epoch: [003][000/070]   Time 0.007 (0.007)   Data 0.002 (0.002)   Loss 0.5039 (0.5039)   Prec@1 88.000 (88.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:54]
+  **Train** Prec@1 81.943 Prec@5 100.000 Error@1 18.057
+  **Test** Prec@1 81.680 Prec@5 100.000 Error@1 18.320
+
+==>>[2024-11-25 18:53:54] [Epoch=004/020] [Need: 00:00:09] [LR=0.0010] [Best : Accuracy=81.68, Error=18.32]
+  Epoch: [004][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.7146 (0.7146)   Prec@1 70.000 (70.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:54]
+  **Train** Prec@1 83.143 Prec@5 100.000 Error@1 16.857
+  **Test** Prec@1 82.900 Prec@5 100.000 Error@1 17.100
+
+==>>[2024-11-25 18:53:55] [Epoch=005/020] [Need: 00:00:08] [LR=0.0010] [Best : Accuracy=82.90, Error=17.10]
+  Epoch: [005][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.5487 (0.5487)   Prec@1 82.000 (82.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:55]
+  **Train** Prec@1 83.714 Prec@5 100.000 Error@1 16.286
+  **Test** Prec@1 83.740 Prec@5 100.000 Error@1 16.260
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:53:56] [Epoch=006/020] [Need: 00:00:08] [LR=0.0010] [Best : Accuracy=83.74, Error=16.26]
+  Epoch: [006][000/070]   Time 0.007 (0.007)   Data 0.000 (0.000)   Loss 0.4129 (0.4129)   Prec@1 86.000 (86.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:56]
+  **Train** Prec@1 84.771 Prec@5 100.000 Error@1 15.229
+  **Test** Prec@1 84.320 Prec@5 100.000 Error@1 15.680
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:53:57] [Epoch=007/020] [Need: 00:00:08] [LR=0.0010] [Best : Accuracy=84.32, Error=15.68]
+  Epoch: [007][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.7332 (0.7332)   Prec@1 78.000 (78.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:57]
+  **Train** Prec@1 85.629 Prec@5 100.000 Error@1 14.371
+  **Test** Prec@1 84.920 Prec@5 100.000 Error@1 15.080
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:53:57] [Epoch=008/020] [Need: 00:00:07] [LR=0.0010] [Best : Accuracy=84.92, Error=15.08]
+  Epoch: [008][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.4673 (0.4673)   Prec@1 80.000 (80.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:57]
+  **Train** Prec@1 86.343 Prec@5 100.000 Error@1 13.657
+  **Test** Prec@1 85.580 Prec@5 100.000 Error@1 14.420
+
+==>>[2024-11-25 18:53:58] [Epoch=009/020] [Need: 00:00:07] [LR=0.0010] [Best : Accuracy=85.58, Error=14.42]
+  Epoch: [009][000/070]   Time 0.007 (0.007)   Data 0.000 (0.000)   Loss 0.4524 (0.4524)   Prec@1 88.000 (88.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:58]
+  **Train** Prec@1 86.571 Prec@5 100.000 Error@1 13.429
+  **Test** Prec@1 86.040 Prec@5 100.000 Error@1 13.960
+
+==>>[2024-11-25 18:53:59] [Epoch=010/020] [Need: 00:00:06] [LR=0.0010] [Best : Accuracy=86.04, Error=13.96]
+  Epoch: [010][000/070]   Time 0.007 (0.007)   Data 0.000 (0.000)   Loss 0.4854 (0.4854)   Prec@1 90.000 (90.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:59]
+  **Train** Prec@1 87.029 Prec@5 100.000 Error@1 12.971
+  **Test** Prec@1 86.180 Prec@5 100.000 Error@1 13.820
+
+==>>[2024-11-25 18:53:59] [Epoch=011/020] [Need: 00:00:05] [LR=0.0010] [Best : Accuracy=86.18, Error=13.82]
+  Epoch: [011][000/070]   Time 0.007 (0.007)   Data 0.001 (0.001)   Loss 0.2530 (0.2530)   Prec@1 92.000 (92.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:53:59]
+  **Train** Prec@1 87.571 Prec@5 100.000 Error@1 12.429
+  **Test** Prec@1 86.700 Prec@5 100.000 Error@1 13.300
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:54:00] [Epoch=012/020] [Need: 00:00:05] [LR=0.0010] [Best : Accuracy=86.70, Error=13.30]
+  Epoch: [012][000/070]   Time 0.007 (0.007)   Data 0.002 (0.002)   Loss 0.2970 (0.2970)   Prec@1 90.000 (90.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:00]
+  **Train** Prec@1 88.114 Prec@5 100.000 Error@1 11.886
+  **Test** Prec@1 86.700 Prec@5 100.000 Error@1 13.300
+=> Obtain best accuracy, and update the best model
+
+==>>[2024-11-25 18:54:01] [Epoch=013/020] [Need: 00:00:04] [LR=0.0010] [Best : Accuracy=86.70, Error=13.30]
+  Epoch: [013][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.3648 (0.3648)   Prec@1 86.000 (86.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:01]
+  **Train** Prec@1 88.229 Prec@5 100.000 Error@1 11.771
+  **Test** Prec@1 87.300 Prec@5 100.000 Error@1 12.700
+
+==>>[2024-11-25 18:54:01] [Epoch=014/020] [Need: 00:00:03] [LR=0.0010] [Best : Accuracy=87.30, Error=12.70]
+  Epoch: [014][000/070]   Time 0.006 (0.006)   Data 0.000 (0.000)   Loss 0.4558 (0.4558)   Prec@1 88.000 (88.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:01]
+  **Train** Prec@1 88.657 Prec@5 100.000 Error@1 11.343
+  **Test** Prec@1 87.800 Prec@5 100.000 Error@1 12.200
+
+==>>[2024-11-25 18:54:02] [Epoch=015/020] [Need: 00:00:03] [LR=0.0010] [Best : Accuracy=87.80, Error=12.20]
+  Epoch: [015][000/070]   Time 0.005 (0.005)   Data 0.000 (0.000)   Loss 0.5760 (0.5760)   Prec@1 86.000 (86.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:02]
+  **Train** Prec@1 89.543 Prec@5 100.000 Error@1 10.457
+  **Test** Prec@1 87.980 Prec@5 100.000 Error@1 12.020
+
+==>>[2024-11-25 18:54:02] [Epoch=016/020] [Need: 00:00:02] [LR=0.0010] [Best : Accuracy=87.98, Error=12.02]
+  Epoch: [016][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.3441 (0.3441)   Prec@1 86.000 (86.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:02]
+  **Train** Prec@1 89.486 Prec@5 100.000 Error@1 10.514
+  **Test** Prec@1 87.300 Prec@5 100.000 Error@1 12.700
+
+==>>[2024-11-25 18:54:03] [Epoch=017/020] [Need: 00:00:01] [LR=0.0010] [Best : Accuracy=87.98, Error=12.02]
+  Epoch: [017][000/070]   Time 0.006 (0.006)   Data 0.000 (0.000)   Loss 0.1667 (0.1667)   Prec@1 94.000 (94.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:03]
+  **Train** Prec@1 89.714 Prec@5 100.000 Error@1 10.286
+  **Test** Prec@1 87.840 Prec@5 100.000 Error@1 12.160
+
+==>>[2024-11-25 18:54:03] [Epoch=018/020] [Need: 00:00:01] [LR=0.0010] [Best : Accuracy=87.98, Error=12.02]
+  Epoch: [018][000/070]   Time 0.006 (0.006)   Data 0.001 (0.001)   Loss 0.3797 (0.3797)   Prec@1 90.000 (90.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:03]
+  **Train** Prec@1 89.686 Prec@5 100.000 Error@1 10.314
+  **Test** Prec@1 89.300 Prec@5 100.000 Error@1 10.700
+
+==>>[2024-11-25 18:54:04] [Epoch=019/020] [Need: 00:00:00] [LR=0.0010] [Best : Accuracy=89.30, Error=10.70]
+  Epoch: [019][000/070]   Time 0.005 (0.005)   Data 0.001 (0.001)   Loss 0.1523 (0.1523)   Prec@1 94.000 (94.000)   Prec@5 100.000 (100.000)   [2024-11-25 18:54:04]
+  **Train** Prec@1 90.914 Prec@5 100.000 Error@1 9.086
+  **Test** Prec@1 89.500 Prec@5 100.000 Error@1 10.500
+=> Obtain best accuracy, and update the best model

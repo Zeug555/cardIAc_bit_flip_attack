@@ -1,0 +1,262 @@
+save path : ./save/cnn_quan/randbet_0.1_0.01_10_-1/results/6213
+{'data_path': './dataset', 'arch': 'cnn_quan', 'dataset': 'mit-bih', 'epochs': 20, 'start_epoch': 0, 'attack_sample_size': 128, 'test_batch_size': 128, 'optimizer': 'Adam', 'schedule': [25, 40], 'gammas': [0.1, 0.1], 'workers': 4, 'ngpu': 0, 'gpu_id': 0, 'print_freq': 100, 'decay': 0.0003, 'momentum': 0.9, 'limit_layer': -1, 'randbet_coeff': 10, 'k_top': 20, 'randbet': True, 'clipping_coeff': 0.1, 'learning_rate': 0.01, 'manualSeed': 6213, 'save_path': './save/cnn_quan/randbet_0.1_0.01_10_-1/results/6213', 'enable_bfa': True, 'resume': './save/cnn_quan/randbet_0.1_0.01_10_-1/model_best.pth.tar', 'quan_bitwidth': None, 'reset_weight': True, 'evaluate': True, 'n_iter': 30, 'fine_tune': True, 'model_only': False, 'random_bfa': False, 'use_cuda': False}
+Random Seed: 6213
+python version : 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)]
+torch  version : 2.5.1+cpu
+cudnn  version : None
+=> creating model 'cnn_quan'
+=> network :
+ cnn_bones(
+  (conv1): quan_Conv1d(1, 4, kernel_size=(21,), stride=(1,))
+  (pool1): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (conv2): quan_Conv1d(4, 4, kernel_size=(21,), stride=(1,))
+  (pool2): MaxPool1d(kernel_size=3, stride=3, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): quan_Linear(in_features=44, out_features=32, bias=True)
+  (fc2): quan_Linear(in_features=32, out_features=5, bias=True)
+)
+=> loading checkpoint './save/cnn_quan/randbet_0.1_0.01_10_-1/model_best.pth.tar'
+=> loaded checkpoint './save/cnn_quan/randbet_0.1_0.01_10_-1/model_best.pth.tar' (epoch 0)
+  **Test** Prec@1 82.340 Prec@5 100.000 Error@1 17.660
+k_top=20
+Attack_sample=50
+************** ATTACK iteration *****************
+Iteration: [001/030]   Attack Time 0.123 (0.123)  [2024-11-25 19:13:17]
+loss before attack: 0.2761
+loss after attack: 0.2913
+bit flips: 1
+hamming_dist: 1
+  **Test** Prec@1 82.080 Prec@5 100.000 Error@1 17.920
+iteration Time 0.141 (0.141)
+************** ATTACK iteration *****************
+Iteration: [002/030]   Attack Time 0.009 (0.066)  [2024-11-25 19:13:17]
+loss before attack: 0.2913
+loss after attack: 0.3117
+bit flips: 2
+hamming_dist: 2
+  **Test** Prec@1 81.500 Prec@5 100.000 Error@1 18.500
+iteration Time 0.138 (0.140)
+************** ATTACK iteration *****************
+Iteration: [003/030]   Attack Time 0.010 (0.047)  [2024-11-25 19:13:17]
+loss before attack: 0.3117
+loss after attack: 0.3372
+bit flips: 3
+hamming_dist: 3
+  **Test** Prec@1 80.580 Prec@5 100.000 Error@1 19.420
+iteration Time 0.144 (0.141)
+************** ATTACK iteration *****************
+Iteration: [004/030]   Attack Time 0.010 (0.038)  [2024-11-25 19:13:18]
+loss before attack: 0.3372
+loss after attack: 0.3693
+bit flips: 4
+hamming_dist: 4
+  **Test** Prec@1 79.100 Prec@5 100.000 Error@1 20.900
+iteration Time 0.146 (0.142)
+************** ATTACK iteration *****************
+Iteration: [005/030]   Attack Time 0.009 (0.032)  [2024-11-25 19:13:18]
+loss before attack: 0.3693
+loss after attack: 0.4092
+bit flips: 5
+hamming_dist: 5
+  **Test** Prec@1 77.520 Prec@5 100.000 Error@1 22.480
+iteration Time 0.137 (0.141)
+************** ATTACK iteration *****************
+Iteration: [006/030]   Attack Time 0.009 (0.028)  [2024-11-25 19:13:18]
+loss before attack: 0.4092
+loss after attack: 0.4542
+bit flips: 6
+hamming_dist: 6
+  **Test** Prec@1 75.220 Prec@5 100.000 Error@1 24.780
+iteration Time 0.136 (0.141)
+************** ATTACK iteration *****************
+Iteration: [007/030]   Attack Time 0.009 (0.025)  [2024-11-25 19:13:18]
+loss before attack: 0.4542
+loss after attack: 0.5007
+bit flips: 7
+hamming_dist: 7
+  **Test** Prec@1 72.960 Prec@5 100.000 Error@1 27.040
+iteration Time 0.151 (0.142)
+************** ATTACK iteration *****************
+Iteration: [008/030]   Attack Time 0.010 (0.023)  [2024-11-25 19:13:18]
+loss before attack: 0.5007
+loss after attack: 0.5502
+bit flips: 8
+hamming_dist: 8
+  **Test** Prec@1 72.240 Prec@5 100.000 Error@1 27.760
+iteration Time 0.153 (0.143)
+************** ATTACK iteration *****************
+Iteration: [009/030]   Attack Time 0.009 (0.022)  [2024-11-25 19:13:18]
+loss before attack: 0.5502
+loss after attack: 0.6014
+bit flips: 9
+hamming_dist: 9
+  **Test** Prec@1 71.520 Prec@5 100.000 Error@1 28.480
+iteration Time 0.152 (0.144)
+************** ATTACK iteration *****************
+Iteration: [010/030]   Attack Time 0.011 (0.021)  [2024-11-25 19:13:19]
+loss before attack: 0.6014
+loss after attack: 0.6475
+bit flips: 10
+hamming_dist: 10
+  **Test** Prec@1 71.420 Prec@5 100.000 Error@1 28.580
+iteration Time 0.143 (0.144)
+************** ATTACK iteration *****************
+Iteration: [011/030]   Attack Time 0.009 (0.020)  [2024-11-25 19:13:19]
+loss before attack: 0.6475
+loss after attack: 0.6949
+bit flips: 11
+hamming_dist: 11
+  **Test** Prec@1 71.320 Prec@5 100.000 Error@1 28.680
+iteration Time 0.136 (0.143)
+************** ATTACK iteration *****************
+Iteration: [012/030]   Attack Time 0.009 (0.019)  [2024-11-25 19:13:19]
+loss before attack: 0.6949
+loss after attack: 0.7364
+bit flips: 12
+hamming_dist: 12
+  **Test** Prec@1 71.320 Prec@5 100.000 Error@1 28.680
+iteration Time 0.135 (0.143)
+************** ATTACK iteration *****************
+Iteration: [013/030]   Attack Time 0.009 (0.018)  [2024-11-25 19:13:19]
+loss before attack: 0.7364
+loss after attack: 0.7841
+bit flips: 13
+hamming_dist: 13
+  **Test** Prec@1 71.420 Prec@5 100.000 Error@1 28.580
+iteration Time 0.140 (0.142)
+************** ATTACK iteration *****************
+Iteration: [014/030]   Attack Time 0.010 (0.017)  [2024-11-25 19:13:19]
+loss before attack: 0.7841
+loss after attack: 0.8355
+bit flips: 14
+hamming_dist: 14
+  **Test** Prec@1 71.600 Prec@5 100.000 Error@1 28.400
+iteration Time 0.175 (0.145)
+************** ATTACK iteration *****************
+Iteration: [015/030]   Attack Time 0.009 (0.017)  [2024-11-25 19:13:19]
+loss before attack: 0.8355
+loss after attack: 0.8937
+bit flips: 15
+hamming_dist: 15
+  **Test** Prec@1 71.720 Prec@5 100.000 Error@1 28.280
+iteration Time 0.138 (0.144)
+************** ATTACK iteration *****************
+Iteration: [016/030]   Attack Time 0.009 (0.016)  [2024-11-25 19:13:19]
+loss before attack: 0.8937
+loss after attack: 0.9531
+bit flips: 16
+hamming_dist: 16
+  **Test** Prec@1 71.540 Prec@5 100.000 Error@1 28.460
+iteration Time 0.138 (0.144)
+************** ATTACK iteration *****************
+Iteration: [017/030]   Attack Time 0.009 (0.016)  [2024-11-25 19:13:20]
+loss before attack: 0.9531
+loss after attack: 1.0150
+bit flips: 17
+hamming_dist: 17
+  **Test** Prec@1 71.340 Prec@5 100.000 Error@1 28.660
+iteration Time 0.136 (0.144)
+************** ATTACK iteration *****************
+Iteration: [018/030]   Attack Time 0.010 (0.016)  [2024-11-25 19:13:20]
+loss before attack: 1.0150
+loss after attack: 1.0772
+bit flips: 18
+hamming_dist: 18
+  **Test** Prec@1 70.940 Prec@5 100.000 Error@1 29.060
+iteration Time 0.145 (0.144)
+************** ATTACK iteration *****************
+Iteration: [019/030]   Attack Time 0.009 (0.015)  [2024-11-25 19:13:20]
+loss before attack: 1.0772
+loss after attack: 1.1186
+bit flips: 19
+hamming_dist: 19
+  **Test** Prec@1 70.540 Prec@5 100.000 Error@1 29.460
+iteration Time 0.136 (0.143)
+************** ATTACK iteration *****************
+Iteration: [020/030]   Attack Time 0.010 (0.015)  [2024-11-25 19:13:20]
+loss before attack: 1.1186
+loss after attack: 1.1598
+bit flips: 20
+hamming_dist: 20
+  **Test** Prec@1 70.320 Prec@5 100.000 Error@1 29.680
+iteration Time 0.131 (0.143)
+************** ATTACK iteration *****************
+Iteration: [021/030]   Attack Time 0.009 (0.015)  [2024-11-25 19:13:20]
+loss before attack: 1.1598
+loss after attack: 1.2029
+bit flips: 21
+hamming_dist: 21
+  **Test** Prec@1 69.340 Prec@5 100.000 Error@1 30.660
+iteration Time 0.133 (0.142)
+************** ATTACK iteration *****************
+Iteration: [022/030]   Attack Time 0.010 (0.014)  [2024-11-25 19:13:20]
+loss before attack: 1.2029
+loss after attack: 1.2427
+bit flips: 22
+hamming_dist: 22
+  **Test** Prec@1 69.340 Prec@5 100.000 Error@1 30.660
+iteration Time 0.137 (0.142)
+************** ATTACK iteration *****************
+Iteration: [023/030]   Attack Time 0.008 (0.014)  [2024-11-25 19:13:20]
+loss before attack: 1.2427
+loss after attack: 1.2813
+bit flips: 23
+hamming_dist: 23
+  **Test** Prec@1 69.340 Prec@5 100.000 Error@1 30.660
+iteration Time 0.134 (0.142)
+************** ATTACK iteration *****************
+Iteration: [024/030]   Attack Time 0.009 (0.014)  [2024-11-25 19:13:21]
+loss before attack: 1.2813
+loss after attack: 1.3199
+bit flips: 24
+hamming_dist: 24
+  **Test** Prec@1 69.340 Prec@5 100.000 Error@1 30.660
+iteration Time 0.148 (0.142)
+************** ATTACK iteration *****************
+Iteration: [025/030]   Attack Time 0.008 (0.014)  [2024-11-25 19:13:21]
+loss before attack: 1.3199
+loss after attack: 1.3582
+bit flips: 25
+hamming_dist: 25
+  **Test** Prec@1 68.840 Prec@5 100.000 Error@1 31.160
+iteration Time 0.132 (0.141)
+************** ATTACK iteration *****************
+Iteration: [026/030]   Attack Time 0.009 (0.014)  [2024-11-25 19:13:21]
+loss before attack: 1.3582
+loss after attack: 1.4271
+bit flips: 26
+hamming_dist: 26
+  **Test** Prec@1 67.320 Prec@5 100.000 Error@1 32.680
+iteration Time 0.149 (0.142)
+************** ATTACK iteration *****************
+Iteration: [027/030]   Attack Time 0.010 (0.013)  [2024-11-25 19:13:21]
+loss before attack: 1.4271
+loss after attack: 1.4981
+bit flips: 27
+hamming_dist: 27
+  **Test** Prec@1 66.780 Prec@5 100.000 Error@1 33.220
+iteration Time 0.142 (0.142)
+************** ATTACK iteration *****************
+Iteration: [028/030]   Attack Time 0.011 (0.013)  [2024-11-25 19:13:21]
+loss before attack: 1.4981
+loss after attack: 1.5412
+bit flips: 28
+hamming_dist: 28
+  **Test** Prec@1 66.280 Prec@5 100.000 Error@1 33.720
+iteration Time 0.136 (0.142)
+************** ATTACK iteration *****************
+Iteration: [029/030]   Attack Time 0.010 (0.013)  [2024-11-25 19:13:21]
+loss before attack: 1.5412
+loss after attack: 1.5818
+bit flips: 29
+hamming_dist: 29
+  **Test** Prec@1 66.020 Prec@5 100.000 Error@1 33.980
+iteration Time 0.137 (0.141)
+************** ATTACK iteration *****************
+Iteration: [030/030]   Attack Time 0.009 (0.013)  [2024-11-25 19:13:22]
+loss before attack: 1.5818
+loss after attack: 1.6229
+bit flips: 30
+hamming_dist: 29
+  **Test** Prec@1 65.720 Prec@5 100.000 Error@1 34.280
+iteration Time 0.133 (0.141)
