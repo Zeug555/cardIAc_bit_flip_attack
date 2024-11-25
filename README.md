@@ -39,3 +39,5 @@ On possède donc deux variables `clipping_value` et `randbet`.
 ![image](./cnn_accuracy_vs_bfa.png)
 
 On observe que les attaques sont très efficaces en peu de flip de bits avec les modèles sans protections (ils perdent tout deux plus de 40% de précisions en seulement 10 bits) lorsque les modèles avec entrainement par *clipping_value* sont bien plus robustes bien que pas infaillibles.
+
+Une anomalie cependant est d'observé qu'une attaque aléatoire est plus efficace sur notre modèle qu'une attaque ciblée.
